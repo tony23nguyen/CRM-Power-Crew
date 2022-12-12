@@ -28,7 +28,7 @@ A simple and clean CRM.
   <p>This is a customer relationship management tool that helps businesses keep track of their interactions with customers, manage their sales and marketing efforts, and improve their overall customer experience.</p>
   <h2>Getting Started</h2>
   <ol>
-    <li>Sign up for an account at our website: www.crm.com</li>
+    <li>Sign up for an account at our website: *Link for Site here*</li>
     <li>Log in to the CRM using your username and password</li>
     <li>Add your customer information and start managing your interactions with them</li>
   </ol>
@@ -39,6 +39,6 @@ A simple and clean CRM.
     <li>Analyze customer data to identify trends and improve the customer experience</li>
   </ul>
   <h2>Support</h2>
-  <p>If you have any questions or need help using our CRM, please contact our support team at support@crm.com.</p>
+  <p>If you have any questions or need help using our CRM, please contact our support team at *Site Link*.</p>
 </body>
 </html>
