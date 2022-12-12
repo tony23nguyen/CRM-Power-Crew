@@ -4,7 +4,7 @@ A simple and clean CRM.
 <html>
 <head>
   <meta charset="utf-8">
-  <title>CRM README</title>
+<!--   <title>CRM README</title>
   <style>
     body {
       font-family: sans-serif;
@@ -21,7 +21,7 @@ A simple and clean CRM.
     li {
       margin-bottom: 10px;
     }
-  </style>
+  </style> -->
 </head>
 <body>
   <h1>Welcome to our CRM</h1>
