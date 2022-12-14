@@ -22,6 +22,7 @@ Lorem ipsum the back-end team.
 - Lead category (cold, warm, hot)
 - Contact status (Not Contacted, Could Not Contact, Qualified, Unqualified, Refused)
 - Date-time added (default now)
+- Owner id (should reference a user)
 
 #### Contacts collection schema
 - id (default primary key)
@@ -32,6 +33,7 @@ Lorem ipsum the back-end team.
 - Total deal value
 - Date-time added (default now)
 - Archived (y/n)
+- Owner id (should reference a user)
 
 
 #### Deals collection schema
@@ -42,6 +44,7 @@ Lorem ipsum the back-end team.
 - Deal category (Won, Lost, Waiting for Response, Update Required, Won-Closed, Lost-Closed)
 - Last Update (update this whenever the document gets updated)
 - Archived (y/n)
+- Owner id (should reference a user)
 
 ### Routing
 - /login - Needs a post route for logging in and authentication.
