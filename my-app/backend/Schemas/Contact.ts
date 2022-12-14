@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const {Schema} = mongoose;
 
-const contact_schema = new Schema({
+const contact_schema: mongoose.Schema = new Schema({
     Name: String,
     Company: String,
     phone_number: String,
@@ -12,4 +12,4 @@ const contact_schema = new Schema({
     archived: Boolean
 })
 
-module.exports = mongoose.Model('contact_schema', contact_schema);
+module.exports = mongoose.model('contact_schema', contact_schema);
