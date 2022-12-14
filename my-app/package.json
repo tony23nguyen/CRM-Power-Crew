@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api": "node ./backend/server.js"
+    "api": "npx ts-node ./backend/server.ts"
   },
   "eslintConfig": {
     "extends": [

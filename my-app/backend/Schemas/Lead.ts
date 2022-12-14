@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const {Schema} = mongoose;
 
-const lead_schema = new Schema({
+const lead_schema: mongoose.Schema = new Schema({
     Name: String,
     Company: String,
     phone_number: String,
@@ -13,4 +13,4 @@ const lead_schema = new Schema({
     owner_id: String
 })
 
-module.exports = mongoose.Model('lead_schema', lead_schema);
+module.exports = mongoose.model('lead_schema', lead_schema);
