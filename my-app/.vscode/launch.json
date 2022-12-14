@@ -1,0 +1,3 @@
+{
+    "preLaunchTask": "tsc: build - tsconfig.json"
+}
