@@ -24,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api": "npx ts-node ./backend/server.ts"
+    "api": "npx ts-node ./backend/server.ts",
+    "seed": "npx ts-node ./backend/seeding/seed.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +48,7 @@
   "devDependencies": {
     "@types/express": "^4.17.15",
     "@types/node": "^18.11.15",
+    "dotenv": "^16.0.3",
     "nodemon": "^2.0.20",
     "typescript": "^4.9.4"
   }

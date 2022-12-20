@@ -9,7 +9,8 @@ const lead_schema: mongoose.Schema = new Schema({
     creation_date: {type: Date, default: Date.now},
     last_update: {type: Date, default: Date.now}, 
     owner_id: String,
-    contact_id: String
+    contact_id: String,
+    archived: {type: Boolean, default: false}
 })
 
-module.exports = mongoose.model('lead_schema', lead_schema);
+export default mongoose.model('Deals', lead_schema);
