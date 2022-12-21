@@ -1,7 +1,15 @@
-import mongoose from 'mongoose';
-const {Schema} = mongoose;
+import { model, Schema} from 'mongoose';
 
-const user_schema: mongoose.Schema = new Schema({
+interface IUser {
+    username: string;
+    password: string;
+    email: string;
+    created_at: Date;
+    phone_number: string;
+    refresh_token: string;
+    auth_token: string
+  }
+  const userSchema = new Schema<IUser>({
     username: {type: String, required: true, unique: true},
     password: {type: String, required: true},
     email: {type: String, required: true, unique: true},
@@ -11,4 +19,7 @@ const user_schema: mongoose.Schema = new Schema({
     auth_token: {type: String, required: false}
 })
 
-export default mongoose.model('Users', user_schema);
+
+const User =  model<IUser>('User', userSchema);
+
+export default User
