@@ -1,15 +1,26 @@
-import mongoose from 'mongoose';
-const {Schema} = mongoose;
 
-const contact_schema: mongoose.Schema = new Schema({
-    Name: String,
-    Company: String,
+import { model, Schema, Types } from 'mongoose';
+
+interface IContact {
+    name: string;
+    company: string;
+    phone_number: string;
+    email: string;
+    creation_date: Date;
+    last_update: Date;
+    owner_id: Types.ObjectId;
+    archived: boolean
+  }
+const contactSchema = new Schema<IContact>({
+    name: String,
+    company: String,
     phone_number: String,
-    Email: String,
+    email: String,
     creation_date: {type: Date, default: Date.now},
     last_update: {type: Date, default: Date.now},
-    owner_id: String,
-    archived: {type: Boolean, default: false}
+    owner_id: { type: Schema.Types.ObjectId, ref: 'User' },
+    archived: Boolean
 })
 
-export default mongoose.model('Contacts', contact_schema);
+const Contact =  model<IContact>('Contact', contactSchema);
+export default Contact
