@@ -51,36 +51,45 @@ export default function Table(): any{
     let userFilter: filterColumns = {
         fname: true,
         lname: true,
-        email: false,
+        email: true,
         companyname: true,
         phone: false
     }
+
+    function createTableHeaders(): any{
+        return(           
+                <tr>
+                    {userFilter.fname && <th>First Name</th>}
+                    {userFilter.lname && <th>Last Name</th>}
+                    {userFilter.email && <th>Email</th>}
+                    {userFilter.companyname && <th>Company</th>}
+                    {userFilter.phone && <th>Phone</th>}
+                </tr>
+        )
+    }
+
 
     function createTableRows( ): any{
         return(
             customers.map((val, key) => {
                 return (
                     <tr key={key}>
-                        <td>{val.fname}</td>
-                        <td>{val.lname}</td>
-                        <td>{val.email}</td>
-                        <td>{val.companyname}</td>
-                        <td>{val.phone}</td>
+                        {userFilter.fname && <td>{val.fname}</td>}
+                        {userFilter.lname && <td>{val.lname}</td>}
+                        {userFilter.email && <td>{val.email}</td>}
+                        {userFilter.companyname && <td>{val.companyname}</td>}
+                        {userFilter.phone && <td>{val.phone}</td>}
                     </tr>
+
                 )
-            }
+            })
         )
-    )
-}
+    }
     //Table component - returnn
     return (
         <table>
             <thead>
-                <td>First Name</td>
-                <td>Last Name</td>
-                <td>Email</td>
-                <td>Company</td>
-                <td>Phone</td>
+                {createTableHeaders()}
             </thead>
             <tbody>
                 {createTableRows()}
