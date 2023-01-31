@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+
+table {
+  border: 1px solid lightgray;
+  margin-left: 20%;
+}
+
+tbody {
+  border-bottom: 1px solid lightgray;
+}
+
+th {
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  padding: 2px 4px;
+}
+
+td {
+  color: rgb(103, 190, 227);
+  border: 1px solid black;
+}
+
+tfoot th {
+  font-weight: normal;
+}
+
+select{
+  width: 300px;
+}

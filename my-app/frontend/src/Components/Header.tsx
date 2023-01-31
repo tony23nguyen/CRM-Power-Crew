@@ -10,7 +10,7 @@ export default function Header(): any{
                {/* each select box needs to be its own component - allow the creation of multiple 
                dropsdown from the user with defualt being the entire table*/}
             <Flex justify="space-between">
-                <Select placeholder='Select workspace' w={12}>
+                <Select placeholder='Select workspace'>
                     <option value='option1'>Add</option>
                     <option value='option2'>Add+</option>
                     <option value='option3'>Add+</option>
