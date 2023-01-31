@@ -65,3 +65,16 @@ tfoot th {
 select{
   width: 300px;
 }
+
+.modalFilter{
+  position:fixed;
+  inset: 0;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 250px;
+  height: 250;
+  z-index: 1;
+
+}
