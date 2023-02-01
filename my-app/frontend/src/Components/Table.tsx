@@ -1,8 +1,9 @@
 import { filter } from '@chakra-ui/react';
 import React, { createElement } from 'react'
 
-export default function Table(): any{
+export default function Table(props: any): any{
     
+
     interface filterColumns { 
         fname: boolean;
         lname: boolean;
@@ -28,7 +29,7 @@ export default function Table(): any{
     let bob: tabledata = {
         fname: "bob",
         lname: "smith",
-        email: "poop@poopers.com",
+        email: "bob@EEFire.com",
         companyname: "Adios",
         phone: 5047773333,
         category: "rentals",
@@ -38,7 +39,7 @@ export default function Table(): any{
     let John: tabledata = {
         fname: "John",
         lname: "smith",
-        email: "poop@poopers.com",
+        email: "John@EEFire.com",
         companyname: "Adios",
         phone: 5047773333,
         category: "rentals",
@@ -48,7 +49,7 @@ export default function Table(): any{
     let Stacey: tabledata = {
         fname: "Stacey",
         lname: "smith",
-        email: "poop@poopers.com",
+        email: "Stacey@EEFire.com",
         companyname: "Adios",
         phone: 5047773333,
         category: "rentals",
@@ -58,7 +59,7 @@ export default function Table(): any{
     let Lilia: tabledata = {
         fname: "Lilia",
         lname: "smith",
-        email: "poop@poopers.com",
+        email: "Lilia@EEFire.com",
         companyname: "Adios",
         phone: 5047773333,
         category: "Vendor",
@@ -81,32 +82,32 @@ export default function Table(): any{
     function createTableHeaders(): any{
         return(           
             <tr>
-                {userFilter.fname && <th>First Name</th>}
-                {userFilter.lname && <th>Last Name</th>}
-                {userFilter.email && <th>Email</th>}
-                {userFilter.companyname && <th>Company</th>}
-                {userFilter.phone && <th>Phone</th>}
-                {userFilter.category && <th>Category</th>}
-                {userFilter.categorystatus && <th>Status</th>}
-                {userFilter.priority && <th>Priority</th>}
+                {props.filter.fname && <th>First Name</th>}
+                {props.filter.lname && <th>Last Name</th>}
+                {props.filter.email && <th>Email</th>}
+                {props.filter.companyname && <th>Company</th>}
+                {props.filter.phone && <th>Phone</th>}
+                {props.filter.category && <th>Category</th>}
+                {props.filter.categorystatus && <th>Status</th>}
+                {props.filter.priority && <th>Priority</th>}
             </tr>
         )
     }
 
-
+//https://clips.twitch.tv/ProductiveDaintyMushroomSoBayed-9PlzN8ug857sw5VW
     function createTableRows( ): any{
         return(
             customers.map((val, key) => {
                 return (
                     <tr key={key}>
-                        {userFilter.fname && <td>{val.fname}</td>}
-                        {userFilter.lname && <td>{val.lname}</td>}
-                        {userFilter.email && <td>{val.email}</td>}
-                        {userFilter.companyname && <td>{val.companyname}</td>}
-                        {userFilter.phone && <td>{val.phone}</td>}
-                        {userFilter.category && <td>{val.category}</td>}
-                        {userFilter.categorystatus && <td>{val.categorystatus}</td>}
-                        {userFilter.priority && <td>{val.priority}</td>}
+                        {props.filter.fname && <td>{val.fname}</td>}
+                        {props.filter.lname && <td>{val.lname}</td>}
+                        {props.filter.email && <td>{val.email}</td>}
+                        {props.filter.companyname && <td>{val.companyname}</td>}
+                        {props.filter.phone && <td>{val.phone}</td>}
+                        {props.filter.category && <td>{val.category}</td>}
+                        {props.filter.categorystatus && <td>{val.categorystatus}</td>}
+                        {props.filter.priority && <td>{val.priority}</td>}
                     </tr>
 
                 )
