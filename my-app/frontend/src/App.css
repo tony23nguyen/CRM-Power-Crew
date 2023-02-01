@@ -68,13 +68,19 @@ select{
 
 .modalFilter{
   position:fixed;
-  inset: 0;
-  background-color: #282c34;
+  background-color: #8cacea;
   display: flex;
   justify-content: center;
   justify-items: center;
   width: 250px;
-  height: 250;
-  z-index: 1;
 
+
+}
+.filterSelectors{
+  display: flex;
+  flex-direction: column;
+}
+.filterSelectors * {
+  cursor: pointer;
+  margin: auto;
 }

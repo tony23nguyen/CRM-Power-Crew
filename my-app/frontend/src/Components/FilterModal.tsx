@@ -15,13 +15,13 @@ export default function FilterModal(props: any){
                 </div>
                 
                 <div className="modalBody">
-                    <div>
-                        <a href="#">Name</a>
-                        <a href="#">Company</a>
-                        <a href="#">Last Name</a>
-                        <a href="#">Phone</a>
-                        <a href="#">Email</a>
-                        <a href="#">Phone</a>
+                    <div className="filterSelectors">
+                        <span>Name</span>
+                        <span>Company</span>
+                        <span>Last Name</span>
+                        <span>Phone</span>
+                        <span>Email</span>
+                        <span>Phone</span>
                     </div>  
                 <button onClick={()=> props.setIsOpen(false)}>Close</button>
                 </div>                  
