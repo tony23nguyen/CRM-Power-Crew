@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import mongoose from "mongoose";
-import User from "../models/User.js";
+import User from "../models/User";
 
 
 const createUser = async (_req: Request, res: Response, next: NextFunction) => {

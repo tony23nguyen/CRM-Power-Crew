@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import mongoose from "mongoose";
-import Deal from "../models/Deal.js";
+import Deal from "../models/Deal";
 const getAllDeals = async (_req: Request, res: Response, next: NextFunction) => {
     try {
         const deals = await Deal.find()

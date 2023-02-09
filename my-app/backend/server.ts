@@ -3,10 +3,10 @@ import mongoose from "mongoose";
 import * as dotenv from 'dotenv' 
 import {} from 'dotenv/config'
 
-import contactRoutes from './routes/Contact.js' 
-import dealRoutes from './routes/Deal.js'
-import leadRoutes from './routes/Lead.js'
-import authRoutes from './routes/Auth.js'
+import contactRoutes from './routes/Contact' 
+import dealRoutes from './routes/Deal'
+import leadRoutes from './routes/Lead'
+import authRoutes from './routes/Auth'
 
 dotenv.config()
 const app = express();

@@ -1,5 +1,5 @@
 import express from 'express'
-import controller from '../controllers/Deal.js'
+import controller from '../controllers/Deal'
 
 const router = express.Router()
 

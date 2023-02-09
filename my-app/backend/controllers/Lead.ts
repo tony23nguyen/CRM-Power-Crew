@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import mongoose from "mongoose";
-import Lead from "../models/Lead.js";
+import Lead from "../models/Lead";
 const getAllLeads = async (_req: Request, res: Response, next: NextFunction) => {
     try {
         const leads = await Lead.find()

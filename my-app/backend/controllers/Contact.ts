@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import mongoose from "mongoose";
-import Contact from "../models/Contact.js";
+import Contact from "../models/Contact";
 const getAllContacts = async (_req: Request, res: Response, next: NextFunction) => {
     try {
         const contacts = await Contact.find()
@@ -19,7 +19,7 @@ const getContact = async (_req: Request, res: Response, next: NextFunction) => {
     }
 }
 const createContact = async (_req: Request, res: Response, next: NextFunction) => {
-    const { name, company, phone_number, email, owner_id } = _req.body
+    const { name, company, phone_number, email, total_deal_value, owner_id } = _req.body
     let creation_date = new Date()
     let last_update = new Date()
     let archived = false
@@ -31,6 +31,7 @@ const createContact = async (_req: Request, res: Response, next: NextFunction) =
             company,
             phone_number,
             email,
+            total_deal_value,
             creation_date,
             last_update,
             owner_id,
@@ -45,7 +46,7 @@ const createContact = async (_req: Request, res: Response, next: NextFunction) =
 }
 const updateContact = async (_req: Request, res: Response, next: NextFunction) => {
     let contact_id = _req.params.contactId
-    const { name, company, phone_number, email } = _req.body
+    const { name, company, phone_number, email, total_deal_value } = _req.body
     let last_update = new Date()
 
     try {
@@ -54,6 +55,7 @@ const updateContact = async (_req: Request, res: Response, next: NextFunction) =
             company,
             phone_number,
             email,
+            total_deal_value,
             last_update
         }, { new: true })
         res.status(201).json({ contact: updatedContact })

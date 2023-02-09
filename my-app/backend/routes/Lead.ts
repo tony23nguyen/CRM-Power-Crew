@@ -1,5 +1,5 @@
 import express from 'express'
-import controller from '../controllers/Lead.js'
+import controller from '../controllers/Lead'
 
 const router = express.Router()
 
