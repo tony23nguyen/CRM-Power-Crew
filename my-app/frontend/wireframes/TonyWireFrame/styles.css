@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  color: black;
+}
+.flex {
+  display: flex;
+}
+.primary-header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2em;
+  width: 100%;
+}
+
+.main-heading {
+  font-size: 4em;
+  margin: 1rem;
+}
+.primary-navbar {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 2rem;
+  background-color: hsla(210 60% 90%);
+  align-items: center;
+}
+.primary-navbar a {
+  margin: 1rem;
+  text-decoration: none;
+}
+.utility-nav ul {
+  display: flex;
+  flex-flow: row;
+  gap: 1em;
+}
+
+.utility-nav li {
+  font-size: 2em;
+  margin: 1em;
+}
+
+.utility-nav a {
+  text-decoration: none;
+}
+.container {
+  /* justify-content: space-around; */
+  flex-flow: row wrap;
+  margin: 2em;
+}
+.card-header {
+  font-weight: 600;
+  font-size: 3rem;
+}
+.contact-card {
+  flex-flow: row;
+  align-items: flex-start;
+  background-color: hsla(210 60% 90%);
+  padding: 3em;
+  margin: 0.3em;
+  height: 20em;
+  flex-basis: 100vw;
+}
+
+.contact-card li {
+  display: flex;
+  font-size: 2rem;
+}
